@@ -20,3 +20,13 @@ for n in n_values:
 magnitudes = np.abs(D_n)
 phases = np.angle(D_n)
 
+# Results in a structured form
+results = {
+    "n": n_values,
+    "|D_n| (magnitude)": magnitudes,
+    "∠D_n (phase in radians)": phases
+}
+
+import pandas as pd
+df_results = pd.DataFrame(results)
+print(df_results)
